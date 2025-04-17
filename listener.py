@@ -12,7 +12,6 @@ def main():
     client.loop_start()
     while True:
         sleep(1)
-    client.loop_end()
 
 if __name__ == "__main__":
     main()
