@@ -6,8 +6,8 @@ from publisher import Publisher
 def main():
     client = create_client()
     pub = Publisher(client, "test")
-    client.loop_start()
     for i in range(30):
+        client.loop()
         pub.send(f"Hello world: {i}")
         sleep(1)
 
