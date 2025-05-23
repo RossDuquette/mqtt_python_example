@@ -4,4 +4,4 @@ class Publisher():
         self.__topic = topic
 
     def send(self, msg):
-        self.__client.publish(self.__topic, msg, qos=1)
+        self.__client.publish(self.__topic, str(msg), qos=1)

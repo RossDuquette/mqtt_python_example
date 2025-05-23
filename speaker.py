@@ -8,7 +8,8 @@ def main():
     pub = Publisher(client, "test")
     for i in range(30):
         client.loop()
-        pub.send(f"Hello world: {i}")
+        msg = {'data': i}
+        pub.send(msg)
         sleep(1)
 
 if __name__ == "__main__":
